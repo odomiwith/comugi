@@ -3,7 +3,6 @@ up:
 build:
 	docker-compose build
 create-project:
-	cp .env-example .env
 	docker-compose up -d --build
 	docker-compose exec app composer create-project --prefer-dist laravel/laravel .
 	docker-compose exec app composer require predis/predis
